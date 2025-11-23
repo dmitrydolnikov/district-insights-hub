@@ -40,10 +40,10 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-      <div className="container flex min-h-16 py-2 items-center">
-        <Link to="/" className="flex items-center gap-2 font-semibold text-primary flex-shrink-0">
-          <Building2 className="h-6 w-6" />
-          <span className="hidden sm:inline">District Insights Hub</span>
+      <div className="container flex py-1 md:py-2 items-center gap-2 md:gap-4">
+        <Link to="/" className="flex items-center gap-2 font-semibold text-primary whitespace-normal">
+          <Building2 className="h-6 w-6 flex-shrink-0" />
+          <span className="hidden sm:inline text-[1.3rem]">District Insights Hub</span>
         </Link>
         
         {/* Desktop Navigation - items wrap text internally but stay on one line */}
@@ -65,8 +65,8 @@ const Header = () => {
         {/* Mobile Navigation */}
         <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden ml-auto">
-            <Button variant="ghost" size="icon" className="h-12 w-12 md:h-10 md:w-10">
-              <Menu className="h-12 w-12 md:h-6 md:w-6" />
+            <Button variant="ghost" className="!h-[72px] !w-[72px] !min-h-[72px] !min-w-[72px] p-0 md:!h-10 md:!w-10 md:!min-h-10 md:!min-w-10 [&_svg]:!h-[57px] [&_svg]:!w-[57px] md:[&_svg]:!h-6 md:[&_svg]:!w-6">
+              <Menu className="h-[57px] w-[57px] md:h-6 md:w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
