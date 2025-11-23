@@ -119,4 +119,17 @@ All colors MUST be HSL.
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Chart axis labels and legend text match KPI metric card fonts (1.5rem = 24px) */
+  [data-chart] .recharts-cartesian-axis-tick-text {
+    font-size: 1.5rem; /* 24px - matches KPI card subtitle */
+  }
+
+  [data-chart] .recharts-cartesian-axis-label {
+    font-size: 1.5rem; /* 24px - matches KPI card subtitle */
+  }
+
+  [data-chart] .recharts-legend-item-text {
+    font-size: 1.5rem; /* 24px - matches KPI card subtitle */
+  }
 }
