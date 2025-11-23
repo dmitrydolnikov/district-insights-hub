@@ -54,6 +54,17 @@ During installation:
    npm run preview
    ```
 
+**Test GitHub Pages build locally** (optional)
+   ```sh
+   # On Unix/Mac/Linux:
+   GITHUB_PAGES=true npm run build
+   npm run preview
+   
+   # On Windows PowerShell:
+   $env:GITHUB_PAGES="true"; npm run build
+   npm run preview
+   ```
+
 ## Technologies Used
 
 This project is built with:
@@ -65,3 +76,13 @@ This project is built with:
 - **Tailwind CSS** - Utility-first CSS framework
 - **React Router** - Client-side routing
 - **Recharts** - Charting library for data visualization
+
+---
+
+## Deployment to GitHub Pages
+
+1. Go to your repository **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions** (not "Deploy from a branch")
+3. Push to `main` branch - deployment happens automatically
+
+Your site will be available at `https://<your-username>.github.io/district-insights-hub/`
