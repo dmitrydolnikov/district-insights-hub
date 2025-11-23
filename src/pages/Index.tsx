@@ -113,18 +113,18 @@ const Index = () => {
             {topics.map((topic) => (
               <Card key={topic.title} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50 flex flex-col">
                 <CardHeader className="flex-grow">
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className={`p-3 bg-primary/10 rounded-lg flex-shrink-0 ${topic.color}`}>
+                  <Link to={topic.link} className="flex items-start gap-3 mb-4 group cursor-pointer">
+                    <div className={`p-3 bg-primary/10 rounded-lg flex-shrink-0 ${topic.color} group-hover:bg-primary/20 transition-colors`}>
                       <topic.icon className="h-8 w-8" />
                     </div>
-                    <CardTitle className="text-2xl flex-1">{topic.title}</CardTitle>
-                  </div>
+                    <CardTitle className="text-2xl flex-1 group-hover:text-primary transition-colors">{topic.title}</CardTitle>
+                  </Link>
                   <CardDescription className="text-lg mt-2">
                     {topic.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-grow">
-                  <ul className="space-y-2 mb-6 flex-grow">
+                  <ul className="space-y-2 flex-grow">
                     {topic.stats.map((stat) => (
                       <li key={stat} className="text-base text-muted-foreground flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
@@ -132,11 +132,6 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button asChild variant="outline" className="w-full mt-auto">
-                    <Link to={topic.link}>
-                      View Analytics <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
                 </CardContent>
               </Card>
             ))}
