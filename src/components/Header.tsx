@@ -28,9 +28,9 @@ const Header = () => {
     <Link
       to={item.path}
       onClick={() => setMobileMenuOpen(false)}
-      className={`px-2 py-2 text-[1.15rem] font-medium transition-colors hover:text-primary whitespace-normal text-center flex-1 leading-tight ${
+      className={`px-2 py-2 text-[1.15rem] font-medium transition-colors hover:text-primary whitespace-normal text-center flex-1 leading-tight relative ${
         location.pathname === item.path
-          ? "text-primary"
+          ? "text-primary border-b-2 border-primary/60"
           : "text-muted-foreground"
       } ${item.isInternal ? "font-bold" : ""}`}
     >
