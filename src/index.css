@@ -101,6 +101,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-size: 1rem; /* 16px - matches text-base, minimum font size across site */
+  }
+  
+  /* Override smaller text sizes to match minimum font size */
+  .text-xs,
+  .text-sm {
+    font-size: 1rem; /* Same as text-base - minimum font size */
   }
 }
 

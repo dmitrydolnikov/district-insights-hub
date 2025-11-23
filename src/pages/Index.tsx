@@ -77,33 +77,36 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-12 pb-8 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-        <div className="container max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            District Insights Hub
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Data-driven insights for constituent services, national security, and economic development.
-            Empowering transparent, effective governance through analytics.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center mb-4">
-            <Button size="lg" className="text-lg" asChild>
-              <Link to="/constituent-services">
-                Explore Dashboards <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+      <section className="relative pt-8 pb-6 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
+        <div className="container max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                District Insights Hub
+              </h1>
+              <p className="text-base md:text-lg text-muted-foreground mb-1">
+                Data-driven insights for constituent services, national security, and economic development.
+              </p>
+              <p className="text-base text-muted-foreground">
+                Comprehensive analytics across key priorities for government transparency and accountability
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Button size="lg" className="text-lg" asChild>
+                <Link to="/constituent-services">
+                  Explore Dashboards <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Topics Section */}
-      <section className="pt-8 pb-16 px-4">
+      <section className="pt-6 pb-16 px-4">
         <div className="container max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Our Focus Areas</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive analytics across key priorities for government transparency and accountability
-            </p>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-foreground">Our Focus Areas</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -116,14 +119,14 @@ const Index = () => {
                     </div>
                     <CardTitle className="text-2xl flex-1">{topic.title}</CardTitle>
                   </div>
-                  <CardDescription className="text-base mt-2">
+                  <CardDescription className="text-lg mt-2">
                     {topic.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-grow">
                   <ul className="space-y-2 mb-6 flex-grow">
                     {topic.stats.map((stat) => (
-                      <li key={stat} className="text-sm text-muted-foreground flex items-center gap-2">
+                      <li key={stat} className="text-base text-muted-foreground flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
                         {stat}
                       </li>
