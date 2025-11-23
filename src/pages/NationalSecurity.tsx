@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import MetricCard from "@/components/MetricCard";
+import DashboardNavigation from "@/components/DashboardNavigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Users, Home, Baby, Briefcase, Cpu } from "lucide-react";
 import { BarChart, Bar, LineChart, Line, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
@@ -37,10 +38,16 @@ const NationalSecurity = () => {
       
       <div className="container max-w-7xl mx-auto pt-4 pb-8 px-4">
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-foreground mb-2">National Security & Military Dashboard</h1>
-          <p className="text-lg text-muted-foreground">
-            Personnel oversight, veteran services, and cyber workforce modernization
-          </p>
+          <div className="flex items-start justify-center gap-4 mb-2">
+            <DashboardNavigation side="left" previous={{ path: "/civic-engagement", label: "Civic Engagement" }} />
+            <div className="flex-1 text-center max-w-4xl">
+              <h1 className="text-4xl font-bold text-foreground mb-2">National Security & Military Dashboard</h1>
+              <p className="text-lg text-muted-foreground">
+                Personnel oversight, veteran services, and cyber workforce modernization
+              </p>
+            </div>
+            <DashboardNavigation side="right" next={{ path: "/economic-development", label: "Economic Development" }} />
+          </div>
         </div>
 
         {/* Key Metrics */}
