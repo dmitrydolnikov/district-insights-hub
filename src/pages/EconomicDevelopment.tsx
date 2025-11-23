@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import MetricCard from "@/components/MetricCard";
+import DashboardNavigation from "@/components/DashboardNavigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Briefcase, DollarSign, Building2, Users, Award } from "lucide-react";
 import { BarChart, Bar, LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
@@ -47,10 +48,16 @@ const EconomicDevelopment = () => {
       
       <div className="container max-w-7xl mx-auto pt-4 pb-8 px-4">
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Economic Development Dashboard</h1>
-          <p className="text-lg text-muted-foreground">
-            Regional economy, small business growth, and job creation metrics
-          </p>
+          <div className="flex items-start justify-center gap-4 mb-2">
+            <DashboardNavigation side="left" previous={{ path: "/national-security", label: "National Security & Military" }} />
+            <div className="flex-1 text-center max-w-4xl">
+              <h1 className="text-4xl font-bold text-foreground mb-2">Economic Development Dashboard</h1>
+              <p className="text-lg text-muted-foreground">
+                Regional economy, small business growth, and job creation metrics
+              </p>
+            </div>
+            <DashboardNavigation side="right" next={{ path: "/clean-energy", label: "Clean Energy & Climate" }} />
+          </div>
         </div>
 
         {/* Key Metrics */}

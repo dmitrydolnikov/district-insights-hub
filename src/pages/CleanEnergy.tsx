@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import MetricCard from "@/components/MetricCard";
+import DashboardNavigation from "@/components/DashboardNavigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Sun, Wind, TrendingDown, DollarSign, Building2 } from "lucide-react";
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area } from "recharts";
@@ -35,10 +36,16 @@ const CleanEnergy = () => {
       
       <div className="container max-w-7xl mx-auto pt-4 pb-8 px-4">
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Clean Energy & Climate Dashboard</h1>
-          <p className="text-lg text-muted-foreground">
-            Tracking renewable energy projects, IRA tax credits, and emissions reductions
-          </p>
+          <div className="flex items-start justify-center gap-4 mb-2">
+            <DashboardNavigation side="left" previous={{ path: "/economic-development", label: "Economic Development" }} />
+            <div className="flex-1 text-center max-w-4xl">
+              <h1 className="text-4xl font-bold text-foreground mb-2">Clean Energy & Climate Dashboard</h1>
+              <p className="text-lg text-muted-foreground">
+                Tracking renewable energy projects, IRA tax credits, and emissions reductions
+              </p>
+            </div>
+            <DashboardNavigation side="right" />
+          </div>
         </div>
 
         {/* Key Metrics */}

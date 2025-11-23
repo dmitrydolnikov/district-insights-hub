@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import MetricCard from "@/components/MetricCard";
+import DashboardNavigation from "@/components/DashboardNavigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, DollarSign, Users, TrendingUp, Building, Key } from "lucide-react";
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
@@ -34,10 +35,16 @@ const Housing = () => {
       
       <div className="container max-w-7xl mx-auto pt-4 pb-8 px-4">
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Housing & Affordability Dashboard</h1>
-          <p className="text-lg text-muted-foreground">
-            Tracking affordable housing investments, rental assistance, and homeownership programs
-          </p>
+          <div className="flex items-start justify-center gap-4 mb-2">
+            <DashboardNavigation side="left" previous={{ path: "/constituent-services", label: "Constituent Services" }} />
+            <div className="flex-1 text-center max-w-4xl">
+              <h1 className="text-4xl font-bold text-foreground mb-2">Housing & Affordability Dashboard</h1>
+              <p className="text-lg text-muted-foreground">
+                Tracking affordable housing investments, rental assistance, and homeownership programs
+              </p>
+            </div>
+            <DashboardNavigation side="right" next={{ path: "/healthcare", label: "Healthcare Access" }} />
+          </div>
         </div>
 
         {/* Key Metrics */}

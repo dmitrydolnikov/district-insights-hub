@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import MetricCard from "@/components/MetricCard";
+import DashboardNavigation from "@/components/DashboardNavigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, DollarSign, CheckCircle, TrendingUp, Clock } from "lucide-react";
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
@@ -11,7 +12,7 @@ const ConstituentServices = () => {
     { name: "Immigration", cases: 2100, color: "hsl(var(--chart-3))" },
     { name: "Medicare", cases: 1900, color: "hsl(var(--chart-4))" },
     { name: "IRS/Taxes", cases: 1500, color: "hsl(var(--chart-5))" },
-    { name: "Other", cases: 1000, color: "hsl(var(--muted))" },
+    { name: "Other", cases: 1000, color: "hsl(215 25% 50%)" },
   ];
 
   const casesTrend = [
@@ -36,10 +37,16 @@ const ConstituentServices = () => {
       
       <div className="container max-w-7xl mx-auto pt-4 pb-8 px-4">
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Constituent Services Dashboard</h1>
-          <p className="text-lg text-muted-foreground">
-            Tracking case resolutions, recovered funds, and service excellence metrics
-          </p>
+          <div className="flex items-start justify-center gap-4 mb-2">
+            <DashboardNavigation side="left" />
+            <div className="flex-1 text-center max-w-4xl">
+              <h1 className="text-4xl font-bold text-foreground mb-2">Constituent Services Dashboard</h1>
+              <p className="text-lg text-muted-foreground">
+                Tracking case resolutions, recovered funds, and service excellence metrics
+              </p>
+            </div>
+            <DashboardNavigation side="right" next={{ path: "/housing", label: "Housing & Affordability" }} />
+          </div>
         </div>
 
         {/* Key Metrics */}

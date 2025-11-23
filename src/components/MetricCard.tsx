@@ -15,17 +15,17 @@ interface MetricCardProps {
 const MetricCard = ({ title, value, subtitle, icon: Icon, trend }: MetricCardProps) => {
   return (
     <Card className="hover:shadow-lg transition-shadow">
-      <CardContent className="p-6">
+      <CardContent className="px-6 py-4">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <p className="text-sm font-medium text-muted-foreground">{title}</p>
-            <h3 className="text-3xl font-bold text-foreground mt-2">{value}</h3>
+            <p className="text-[1.5rem] font-bold text-muted-foreground">{title}</p>
+            <h3 className="text-4xl sm:text-3xl font-bold text-foreground mt-[0.25rem]">{value}</h3>
             {subtitle && (
-              <p className="text-sm text-muted-foreground mt-1">{subtitle}</p>
+              <p className="text-[1.25rem] text-muted-foreground mt-[0.125rem]">{subtitle}</p>
             )}
             {trend && (
               <p
-                className={`text-sm font-medium mt-2 ${
+                className={`text-[1.5rem] font-medium mt-[0.25rem] ${
                   trend.positive ? "text-success" : "text-destructive"
                 }`}
               >
