@@ -77,7 +77,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-12 pb-20 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
+      <section className="relative pt-12 pb-8 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
         <div className="container max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             District Insights Hub
@@ -86,10 +86,10 @@ const Index = () => {
             Data-driven insights for constituent services, national security, and economic development.
             Empowering transparent, effective governance through analytics.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" asChild>
+          <div className="flex flex-wrap gap-4 justify-center mb-4">
+            <Button size="lg" className="text-lg" asChild>
               <Link to="/constituent-services">
-                Explore Dashboards <ArrowRight className="ml-2 h-4 w-4" />
+                Explore Dashboards <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -106,20 +106,22 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {topics.map((topic) => (
-              <Card key={topic.title} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
-                <CardHeader>
-                  <div className={`p-3 bg-primary/10 rounded-lg w-fit mb-4 ${topic.color}`}>
-                    <topic.icon className="h-8 w-8" />
+              <Card key={topic.title} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50 flex flex-col">
+                <CardHeader className="flex-grow">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className={`p-3 bg-primary/10 rounded-lg flex-shrink-0 ${topic.color}`}>
+                      <topic.icon className="h-8 w-8" />
+                    </div>
+                    <CardTitle className="text-2xl flex-1">{topic.title}</CardTitle>
                   </div>
-                  <CardTitle className="text-2xl">{topic.title}</CardTitle>
                   <CardDescription className="text-base mt-2">
                     {topic.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-6">
+                <CardContent className="flex flex-col flex-grow">
+                  <ul className="space-y-2 mb-6 flex-grow">
                     {topic.stats.map((stat) => (
                       <li key={stat} className="text-sm text-muted-foreground flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
@@ -127,7 +129,7 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant="outline" className="w-full mt-auto">
                     <Link to={topic.link}>
                       View Analytics <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

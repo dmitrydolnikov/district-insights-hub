@@ -23,12 +23,26 @@ const Header = () => {
           <Building2 className="h-6 w-6" />
           <span className="hidden sm:inline">District Insights Hub</span>
         </Link>
-        <nav className="ml-auto flex gap-1">
-          {navItems.map((item) => (
+        <nav className="ml-auto flex gap-1 items-center">
+          {navItems.slice(0, -1).map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+              className={`px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
+                location.pathname === item.path
+                  ? "text-primary"
+                  : "text-muted-foreground"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="h-6 w-px bg-border mx-2" />
+          {navItems.slice(-1).map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`px-3 py-2 text-base font-bold transition-colors hover:text-primary ${
                 location.pathname === item.path
                   ? "text-primary"
                   : "text-muted-foreground"
