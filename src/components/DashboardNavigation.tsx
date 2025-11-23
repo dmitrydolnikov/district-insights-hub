@@ -19,9 +19,9 @@ const DashboardNavigation = ({ previous, next, side = "both" }: DashboardNavigat
     return (
       <div className="w-[120px] sm:w-[180px] flex justify-start">
         {previous ? (
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="sm" asChild className="h-12 px-4 sm:h-9 sm:px-3">
             <Link to={previous.path} className="flex items-center gap-1.5">
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-8 w-8 sm:h-4 sm:w-4" />
               <span className="hidden sm:inline">{previous.label}</span>
             </Link>
           </Button>
@@ -34,10 +34,10 @@ const DashboardNavigation = ({ previous, next, side = "both" }: DashboardNavigat
     return (
       <div className="w-[120px] sm:w-[180px] flex justify-end">
         {next ? (
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="sm" asChild className="h-12 px-4 sm:h-9 sm:px-3">
             <Link to={next.path} className="flex items-center gap-1.5">
               <span className="hidden sm:inline">{next.label}</span>
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-8 w-8 sm:h-4 sm:w-4" />
             </Link>
           </Button>
         ) : null}
@@ -50,9 +50,9 @@ const DashboardNavigation = ({ previous, next, side = "both" }: DashboardNavigat
     <>
       <div className="w-[120px] sm:w-[180px] flex justify-start">
         {previous ? (
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="sm" asChild className="h-12 px-4 sm:h-9 sm:px-3">
             <Link to={previous.path} className="flex items-center gap-1.5">
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-8 w-8 sm:h-4 sm:w-4" />
               <span className="hidden sm:inline">{previous.label}</span>
             </Link>
           </Button>
@@ -60,10 +60,10 @@ const DashboardNavigation = ({ previous, next, side = "both" }: DashboardNavigat
       </div>
       <div className="w-[120px] sm:w-[180px] flex justify-end">
         {next ? (
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="sm" asChild className="h-12 px-4 sm:h-9 sm:px-3">
             <Link to={next.path} className="flex items-center gap-1.5">
               <span className="hidden sm:inline">{next.label}</span>
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-8 w-8 sm:h-4 sm:w-4" />
             </Link>
           </Button>
         ) : null}
