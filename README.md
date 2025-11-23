@@ -81,42 +81,8 @@ This project is built with:
 
 ## Deployment to GitHub Pages
 
-This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+1. Go to your repository **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions** (not "Deploy from a branch")
+3. Push to `main` branch - deployment happens automatically
 
-### Automatic Deployment (Recommended)
-
-1. **Enable GitHub Pages in your repository:**
-   - Go to your repository on GitHub
-   - Navigate to **Settings** → **Pages**
-   - Under **Source**, select **GitHub Actions** (not "Deploy from a branch")
-   - Save the settings
-
-2. **Push to main branch:**
-   - The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically:
-     - Build your project when you push to `main` or `master` branch
-     - Deploy the built files to GitHub Pages
-   - You can also manually trigger deployment from the **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**
-
-3. **Your site will be available at:**
-   - `https://<your-username>.github.io/district-insights-hub/`
-   - Or `https://<your-org>.github.io/district-insights-hub/` if using an organization
-
-### Manual Deployment
-
-If you prefer to deploy manually:
-
-1. **Build the project:**
-   ```sh
-   npm run build
-   ```
-
-2. **Deploy the `dist` folder:**
-   - You can use the `gh-pages` package or manually push the `dist` folder to a `gh-pages` branch
-   - Or use GitHub CLI: `gh pages deploy dist`
-
-### Important Notes
-
-- The base path is configured as `/district-insights-hub/` for project sites
-- If deploying to a user/organization site (root domain), update `vite.config.ts` to set `base: "/"`
-- The first deployment may take a few minutes. Subsequent deployments are faster
-- Check the **Actions** tab in your repository to monitor deployment status
+Your site will be available at `https://<your-username>.github.io/district-insights-hub/`
