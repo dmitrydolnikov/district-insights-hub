@@ -20,7 +20,7 @@ const CivicEngagement = () => {
     { topic: "Healthcare", bills: 42, color: "hsl(var(--chart-3))" },
     { topic: "Climate & Energy", bills: 31, color: "hsl(var(--chart-4))" },
     { topic: "Veterans Affairs", bills: 25, color: "hsl(var(--chart-5))" },
-    { topic: "Other", bills: 18, color: "hsl(var(--muted))" },
+    { topic: "Other", bills: 18, color: "hsl(215 25% 50%)" },
   ];
 
   const votingRecord = [

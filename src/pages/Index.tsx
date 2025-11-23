@@ -87,7 +87,7 @@ const Index = () => {
               <p className="text-base md:text-lg text-muted-foreground mb-1">
                 Data-driven insights for constituent services, national security, and economic development.
               </p>
-              <p className="text-base text-muted-foreground">
+              <p className="text-[1.15rem] text-muted-foreground">
                 Comprehensive analytics across key priorities for government transparency and accountability
               </p>
             </div>
@@ -126,7 +126,7 @@ const Index = () => {
                 <CardContent className="flex flex-col flex-grow">
                   <ul className="space-y-2 flex-grow">
                     {topic.stats.map((stat) => (
-                      <li key={stat} className="text-base text-muted-foreground flex items-center gap-2">
+                      <li key={stat} className="text-[1.15rem] text-muted-foreground flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
                         {stat}
                       </li>

@@ -12,7 +12,7 @@ const ConstituentServices = () => {
     { name: "Immigration", cases: 2100, color: "hsl(var(--chart-3))" },
     { name: "Medicare", cases: 1900, color: "hsl(var(--chart-4))" },
     { name: "IRS/Taxes", cases: 1500, color: "hsl(var(--chart-5))" },
-    { name: "Other", cases: 1000, color: "hsl(var(--muted))" },
+    { name: "Other", cases: 1000, color: "hsl(215 25% 50%)" },
   ];
 
   const casesTrend = [

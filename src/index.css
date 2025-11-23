@@ -45,10 +45,10 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --chart-1: 214 84% 42%;
-    --chart-2: 356 75% 53%;
+    --chart-2: 356 75% 40%;
     --chart-3: 142 71% 45%;
-    --chart-4: 38 92% 50%;
-    --chart-5: 280 65% 60%;
+    --chart-4: 38 92% 35%;
+    --chart-5: 280 65% 45%;
   }
 
   .dark {

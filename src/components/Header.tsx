@@ -28,7 +28,7 @@ const Header = () => {
     <Link
       to={item.path}
       onClick={() => setMobileMenuOpen(false)}
-      className={`px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
+      className={`px-3 py-2 text-[1.15rem] font-medium transition-colors hover:text-primary ${
         location.pathname === item.path
           ? "text-primary"
           : "text-muted-foreground"
