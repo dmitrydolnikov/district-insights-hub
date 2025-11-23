@@ -28,7 +28,7 @@ const Header = () => {
     <Link
       to={item.path}
       onClick={() => setMobileMenuOpen(false)}
-      className={`px-3 py-2 text-[1.15rem] font-medium transition-colors hover:text-primary ${
+      className={`px-2 py-2 text-[1.15rem] font-medium transition-colors hover:text-primary whitespace-normal text-center flex-1 leading-tight ${
         location.pathname === item.path
           ? "text-primary"
           : "text-muted-foreground"
@@ -40,15 +40,15 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-      <div className="container flex h-16 items-center">
-        <Link to="/" className="flex items-center gap-2 font-semibold text-primary">
+      <div className="container flex min-h-16 py-2 items-center">
+        <Link to="/" className="flex items-center gap-2 font-semibold text-primary flex-shrink-0">
           <Building2 className="h-6 w-6" />
           <span className="hidden sm:inline">District Insights Hub</span>
         </Link>
         
-        {/* Desktop Navigation - scrollable on medium screens */}
-        <nav className="ml-auto hidden md:flex gap-1 items-center overflow-x-auto scrollbar-hide max-w-[calc(100vw-200px)] lg:max-w-none">
-          <div className="flex gap-1 items-center min-w-max">
+        {/* Desktop Navigation - items wrap text internally but stay on one line */}
+        <nav className="ml-auto hidden md:flex flex-1 items-center justify-evenly max-w-[calc(100vw-200px)] lg:max-w-none">
+          <div className="flex items-center justify-evenly w-full">
             {/* Group 1: Services & Engagement */}
             {servicesGroup.map((item) => (
               <NavLink key={item.path} item={item} />
