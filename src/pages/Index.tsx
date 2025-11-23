@@ -77,22 +77,23 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-8 pb-6 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
+      <section className="relative pt-8 pb-2 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
         <div className="container max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-2">
             <div className="flex-1">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                District Insights Hub
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3 leading-tight">
+                Serving Our District with <br className="hidden md:block" />
+                <span className="text-primary">Data & Transparency</span>
               </h1>
-              <p className="text-base md:text-lg text-muted-foreground mb-1">
-                Data-driven insights for constituent services, national security, and economic development.
+              <p className="text-lg md:text-xl text-muted-foreground mb-2">
+                Real-time insights into constituent services, legislative progress, and community impact.
               </p>
               <p className="text-[1.15rem] text-muted-foreground">
-                Comprehensive analytics across key priorities for government transparency and accountability
+                Comprehensive analytics for government accountability.
               </p>
             </div>
-            <div className="flex-shrink-0">
-              <Button size="lg" className="text-lg" asChild>
+            <div className="flex-shrink-0 mt-4 md:mt-0">
+              <Button size="lg" className="text-lg h-14 px-8" asChild>
                 <Link to="/constituent-services">
                   Explore Dashboards <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -140,7 +141,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-primary/5">
+      <section className="py-8 px-4 bg-primary/5">
         <div className="container max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Data-Driven Government That Works

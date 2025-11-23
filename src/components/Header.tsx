@@ -42,7 +42,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
       <div className="container flex py-1 md:py-2 items-center gap-2 md:gap-4">
         <Link to="/" className="flex items-center gap-2 font-semibold text-primary whitespace-normal">
-          <Building2 className="h-6 w-6 flex-shrink-0" />
+          <Building2 className="h-9 w-9 flex-shrink-0" />
           <span className="hidden sm:inline text-[1.3rem]">District Insights Hub</span>
         </Link>
         
