@@ -140,18 +140,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-8 px-4 bg-primary/5">
-        <div className="container max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Data-Driven Government That Works
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            This prototype demonstrates how transparent data analytics can enhance constituent services,
-            improve oversight, and drive better outcomes through data-driven governance.
-          </p>
-        </div>
-      </section>
     </div>
   );
 };
